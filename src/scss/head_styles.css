@@ -1,0 +1,372 @@
+header .under-menu {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+}
+
+header .menu #amount, header .menu .menu__price {
+  font-family: "Lato";
+  font-style: normal;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+header .under-menu {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .under-menu * {
+  display: flex;
+  align-items: center;
+}
+
+header .under-menu #city {
+  margin-left: 7%;
+  position: relative;
+  width: auto;
+}
+
+header .under-menu .city-down {
+  margin-left: 2px;
+  margin-top: 3px;
+  position: relative;
+  width: 10px;
+}
+
+header .under-menu .help {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+
+header .under-menu .help:first-child {
+  margin-left: 15%;
+}
+
+header .under-menu .tel-number {
+  position: relative;
+  margin-right: 7%;
+}
+
+header .under-menu .tel-number .num__icon-phone {
+  width: 15px;
+  height: auto;
+  display: none;
+}
+
+header .under-menu .tel-number img {
+  width: 23px;
+  height: 21px;
+}
+
+header .under-menu .tel-number .num-down {
+  margin-left: 2px;
+  margin-top: 0px;
+  position: relative;
+  width: 10px;
+  height: 10px;
+}
+
+header .info {
+  display: none;
+}
+
+header .menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  background-color: #e7e6e7;
+}
+
+header .menu * {
+  display: flex;
+}
+
+header .menu .logo {
+  align-items: center;
+  margin-left: 7%;
+}
+
+header .menu .logo .logo__text {
+  width: 165px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+header .menu .logo .logo__img {
+  width: 60px;
+}
+
+header .menu .logo p {
+  font-family: "Comfortaa";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  letter-spacing: -0.05em;
+  color: #23b132;
+  padding-bottom: -1000px;
+  border-bottom: 1px solid #23b132;
+}
+
+header .menu #catalog {
+  background-color: #19a227;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  width: 174px;
+  height: 43px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 26px;
+  letter-spacing: 0.01em;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+header .menu #catalog p {
+  margin-left: 10%;
+}
+
+header .menu #catalog img {
+  width: 22px;
+  height: 20px;
+  margin-top: -1px;
+  margin-left: 5%;
+  filter: invert(1);
+}
+
+header .menu .search {
+  display: flex;
+  align-items: center;
+  width: 28%;
+  height: 43px;
+  background-color: white;
+  border-radius: 15px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+header .menu .search img {
+  margin: 10px;
+  width: 20px;
+}
+
+header .menu .search input {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  outline: none;
+  height: 43px;
+  width: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+header .menu .menu-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+header .menu .menu-buttons img {
+  width: 40px;
+}
+
+header .menu #amount {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  margin-left: 0px;
+}
+
+header .menu .buttons {
+  margin-right: 7%;
+  width: 24%;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+header .menu .menu__price {
+  display: flex;
+  align-items: center;
+  margin-left: 3px;
+  font-weight: 600;
+  line-height: 31px;
+}
+
+header .menu .menu__price #rub {
+  font-size: 23px;
+}
+
+header .menu .menu__price .t {
+  font-size: 18px;
+}
+
+header .menu .menu__price #kop {
+  font-size: 18px;
+}
+
+header .menu .menu__price .rub {
+  font-size: 20px;
+  font-family: "Open Sans";
+  margin-left: 3px;
+  margin-top: -3px;
+}
+
+header .menu .menu__price img {
+  margin-left: 2px;
+  margin-top: -3px;
+  position: relative;
+  width: 12.85px;
+  height: 12.45px;
+}
+
+header .menu .busket-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+header .menu .busket-icon * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header .menu .busket-icon img {
+  width: 40px;
+}
+
+header .menu .busket-icon #amount {
+  position: relative;
+  color: #23b132;
+  top: -43px;
+  margin-bottom: -25px;
+}
+
+header .menu__bottom {
+  width: 100%;
+  display: none;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+}
+
+header .menu__bottom p {
+  width: 100%;
+  text-align: center;
+  height: 40px;
+  border: 1px solid rgba(35, 31, 32, 0.11);
+  background-color: white;
+  line-height: 40px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+header .menu__bottom-info {
+  display: none;
+}
+
+@media (max-width: 1250px) {
+  header .menu .menu__price {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  header .menu #catalog {
+    width: 43px;
+    justify-content: center;
+  }
+  header .menu #catalog p {
+    display: none;
+  }
+  header .menu #catalog img {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  header .under-menu .help {
+    width: 300px;
+  }
+  header .menu .buttons {
+    display: none;
+  }
+  header .menu .search {
+    margin-right: 7%;
+    width: 50%;
+  }
+  header .menu__bottom {
+    display: flex;
+  }
+}
+
+@media (max-width: 800px) {
+  header .menu .logo__text {
+    display: none;
+  }
+  header .menu .search {
+    width: 70%;
+  }
+}
+
+@media (max-width: 700px) {
+  header .under-menu #city {
+    margin-left: 2%;
+  }
+  header .under-menu .tel-number {
+    margin-right: 2%;
+  }
+  header .under-menu .help {
+    display: none;
+  }
+  header .menu .logo {
+    margin-left: 2%;
+  }
+  header .menu .search {
+    margin-right: 2%;
+  }
+  header .menu__bottom .menu__bottom-info {
+    display: block;
+  }
+}
+
+@media (max-width: 450px) {
+  header .menu .search {
+    width: 58%;
+  }
+  header .menu__bottom {
+    height: 30px;
+  }
+  header .menu__bottom p {
+    font-size: 10px;
+  }
+}
