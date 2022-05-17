@@ -2,6 +2,14 @@ body {
   user-select: none;
 }
 
+body a:active,
+body a:hover,
+body a:visited,
+body a {
+  text-decoration: none;
+  color: black;
+}
+
 .main-body .novelties .stringNovel, .main-body .hits .string-hits {
   padding-bottom: 30px;
   margin-left: 7%;
@@ -66,7 +74,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  font-family: "Outfit";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -79,6 +87,10 @@ body {
   padding: 10px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   margin-top: 135px;
+}
+
+.main-body .slogan button:hover {
+  cursor: pointer;
 }
 
 .main-body .slogan button img {
@@ -109,26 +121,31 @@ body {
 
 .main-body .pop-categories .pop {
   background: #e7e6e6;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   margin: 2px;
-  border-radius: 20px;
+  border-radius: 5px;
   height: 150px;
   width: 18%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
+  justify-content: space-around;
   min-width: 150px;
 }
 
+.main-body .pop-categories .pop:hover {
+  cursor: pointer;
+}
+
 .main-body .pop-categories .pop img {
-  margin-top: 10px;
   width: 120px;
+  height: 110px;
 }
 
 .main-body .pop-categories .pop p {
-  font-family: "Outfit";
+  font-family: "Roboto";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 25px;
   margin-top: 10px;
   text-align: center;
@@ -150,12 +167,24 @@ body {
   background: #ffffff;
   border-radius: 15px;
   border: 3px solid rgba(35, 31, 32, 0.11);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   width: 200px;
-  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 320px;
   padding: 12px;
 }
 
-.main-body .main-good #name {
+.main-body .main-good:hover {
+  cursor: pointer;
+}
+
+.main-body .main-good *:hover {
+  cursor: pointer;
+}
+
+.main-body .main-good .name {
   font-family: "Oswald";
   font-style: normal;
   font-weight: 700;
@@ -186,6 +215,7 @@ body {
   position: relative;
   margin-top: -20px;
   width: 180px;
+  height: 180px;
   z-index: 1;
 }
 
@@ -202,6 +232,7 @@ body {
 
 .main-body .main-good .mark img {
   width: 13px;
+  height: auto;
   margin-right: 2px;
   margin-top: 0;
 }
@@ -253,6 +284,7 @@ body {
   font-size: 13px;
   line-height: 20px;
   color: #23b132;
+  margin-right: -5px;
 }
 
 .main-body .main-good .good-buttons {
@@ -271,6 +303,7 @@ body {
   font-size: 16px;
   letter-spacing: 0.01em;
   color: #ffffff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .main-body .main-good .good-buttons div {
@@ -285,6 +318,7 @@ body {
 .main-body .main-good .good-buttons .click {
   margin: 0;
   width: 20px;
+  height: auto;
 }
 
 .main-body .main-good .good-info {
@@ -346,6 +380,7 @@ body {
 
 .main-body .novelties .offers .first-offer {
   width: 50%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .main-body .novelties .offers .second-offer {
@@ -392,6 +427,11 @@ body {
 .main-body .other div {
   margin: 0 5px 0 5px;
   width: 100%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.main-body .other div *:hover {
+  cursor: pointer;
 }
 
 .main-body .other img {
@@ -406,13 +446,13 @@ body {
 }
 
 @media (max-width: 1300px) and (max-width: 1000px) {
-  .main-body .main-good #name {
+  .main-body .main-good .name {
     font-size: calc( 8px + 20.4 * ((100vw - 320px) / 1920));
   }
 }
 
 @media (max-width: 1300px) and (min-width: 1000px) {
-  .main-body .main-good #name {
+  .main-body .main-good .name {
     font-size: calc(8px + 12 * (100vw / 1920));
   }
 }
@@ -420,6 +460,7 @@ body {
 @media (max-width: 1300px) {
   .main-body .main-good img {
     width: 100%;
+    height: 144.29px;
   }
 }
 
@@ -430,6 +471,9 @@ body {
   }
   .main-body .slogan button {
     margin-top: 50px;
+  }
+  .main-body .main-good {
+    height: 290px;
   }
 }
 
@@ -554,9 +598,13 @@ body {
   }
   .main-body .main-good {
     padding: 6px;
+    height: 250px;
   }
-  .main-body .main-good #name {
+  .main-body .main-good .name {
     margin-top: 2px;
+  }
+  .main-body .main-good img {
+    max-height: 100px;
   }
   .main-body .main-good .good-info img {
     width: 10px;
@@ -628,6 +676,9 @@ body {
   .main-body .other {
     flex-wrap: wrap;
   }
+  .main-body .main-good {
+    height: 220px;
+  }
   .main-body .main-good .good-buttons button {
     height: 20px;
   }
@@ -663,6 +714,9 @@ body {
   }
   .main-body .novelties .stringNovel {
     padding-bottom: 5px;
+  }
+  .main-body .main-good {
+    height: 200px;
   }
   .main-body .main-good .sale {
     width: 25px;
@@ -739,6 +793,7 @@ body {
   }
   .main-body .main-good {
     width: 33%;
+    height: 290px;
   }
 }
 
@@ -754,14 +809,20 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  .main-body .main-good img {
+    max-height: 190px;
+  }
+}
+
 @media (max-width: 600px) and (max-width: 1000px) {
-  .main-body .main-good #name {
+  .main-body .main-good .name {
     font-size: calc( 10px + 30.6 * ((100vw - 320px) / 1920));
   }
 }
 
 @media (max-width: 600px) and (min-width: 1000px) {
-  .main-body .main-good #name {
+  .main-body .main-good .name {
     font-size: calc(10px + 18 * (100vw / 1920));
   }
 }
@@ -835,6 +896,12 @@ body {
 @media (max-width: 600px) and (min-width: 1000px) {
   .main-body .main-good .price .minus-price {
     font-size: calc(9px + 16 * (100vw / 1920));
+  }
+}
+
+@media (max-width: 500px) {
+  .main-body .main-good {
+    height: 230px;
   }
 }
 

@@ -9,7 +9,7 @@
       href="./src/images/logo1.svg"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="./src/scss/main_styles.css" />
+    <link rel="stylesheet" href="./src/css/main_styles.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
       rel="stylesheet"
@@ -30,30 +30,54 @@
       href="https://fonts.googleapis.com/css?family=Outfit:100,200,300,regular,500,600,700,800,900"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <div class="under-menu">
         <div id="city">
-          <p>Минск</p>
-          <img class="city-down" src="./src/images/city-down.png" />
+          <select name="" id="">
+            <option>Минск</option>
+            <option>Гомель</option>
+            <option>Могилёв</option>
+            <option>Витебск</option>
+            <option>Гродно</option>
+            <option>Брест</option>
+          </select>
         </div>
         <div class="info">
           Информация<img class="info-down" src="./src/images/city-down.png" />
         </div>
-        <div class="help">
+        <div id="help" class="help">
           <p id="payment">Оплата</p>
           <p id="delivery">Доставка</p>
           <p id="selfCaring">Самовывоз</p>
           <p id="help">Помощь</p>
         </div>
-        <div class="tel-number">
+        <div id="tel" class="tel-number">
           <div class="num__change">
             <img src="src/images/MTS.png" class="tel-icon" />
             <p>+375 44 123 675 89</p>
           </div>
           <img class="num__icon-phone" src="src/images/phone.png" />
           <img class="num-down" src="src/images/city-down.png" />
+        </div>
+      </div>
+      <div id="num-drop" class="num-drop">
+        <div>
+          <img src="src/images/MTS.png" class="tel-icon" />
+          <p>+375 44 123 675 89</p>
+        </div>
+        <div>
+          <img src="src/images/life.png" class="tel-icon" />
+          <p>+375 44 123 675 89</p>
+        </div>
+        <div>
+          <img src="src/images/velcom.png" class="tel-icon" />
+          <p>+375 44 123 675 89</p>
         </div>
       </div>
       <div class="menu">
@@ -66,15 +90,21 @@
           <img src="src/images/catalog.png" />
         </div>
         <div class="search">
-          <img src="src/images/search.png" />
-          <input type="text" placeholder="Введите название техники" />
+          <a href="./choise.html">
+            <img id="search" src="src/images/search.png" />
+          </a>
+          <input
+            id="input-search"
+            type="text"
+            placeholder="Введите название техники"
+          />
         </div>
         <div class="buttons">
-          <div class="menu-buttons">
+          <div id="chosen" class="menu-buttons">
             <img src="src/images/chosen.png" />
             <p>Избранное</p>
           </div>
-          <div class="menu-buttons">
+          <div id="compare" class="menu-buttons">
             <img src="src/images/comparison.png" />
             <p>Сравнение</p>
           </div>
@@ -87,7 +117,7 @@
               <p id="amount">0</p>
             </div>
             <div class="menu__price">
-              <p id="rub">34</p>
+              <p id="rub">0</p>
               <p class="t">.</p>
               <p id="kop">00</p>
               <p class="rub">руб</p>
@@ -96,11 +126,198 @@
           </div>
         </div>
       </div>
+      <div id="katalog-drop" class="katalog-drop">
+        <a class="katalog-search" href="./choise.html">
+          <div href="./choise.html">
+            <img src="src/images/fridge-icon.png" />
+            <p>Холодильники</p>
+          </div>
+        </a>
+        <a class="katalog-search" href="./choise.html">
+          <div>
+            <img src="src/images/microwave-icon.png" alt="" />
+            <p>Микроволновки</p>
+          </div>
+        </a>
+        <a class="katalog-search" href="./choise.html">
+          <div>
+            <img src="src/images/vaccum-icon.png" alt="" />
+            <p>Пылесосы</p>
+          </div>
+        </a>
+        <a class="katalog-search" href="./choise.html">
+          <div>
+            <img src="src/images/mult-icon.png" alt="" />
+            <p>Мультиварки</p>
+          </div>
+        </a>
+        <a class="katalog-search" href="./choise.html">
+          <div>
+            <img src="src/images/tv-icon.png" alt="" />
+            <p>Телевизоры</p>
+          </div>
+        </a>
+      </div>
+      <div id="header-drop" class="header-drop">
+        <div class="header">
+          <div>
+            <p>Товары:</p>
+            <p id="kol">0</p>
+          </div>
+          <button id="end" class="end">
+            <p>Купить</p>
+            <img src="src/images/buy-button.png" />
+          </button>
+          <img
+            id="header-cross"
+            class="cross"
+            src="src/images/cross.png"
+            alt=""
+          />
+        </div>
+        <div id="basket-goods">
+          <img class="long-line" src="src/images/long-line.png" />
+          <div class="good">
+            <img class="good-img" src="src/images/vac-cl.png" />
+            <div class="text">
+              <p class="name">Пылесос HOLT HT-VC-007 (синий)</p>
+              <div class="price">
+                <div class="literal">
+                  <p class="literal-rub">260</p>
+                  <p class="literal-kop">.00</p>
+                </div>
+                <p class="before-price">312.00</p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button>В корзину</button>
+              <img class="litter" src="src/images/litter.png" />
+            </div>
+          </div>
+          <img class="long-line" src="src/images/long-line.png" />
+          <div class="good">
+            <img class="good-img" src="src/images/vac-cl.png" />
+            <div class="text">
+              <p class="name">Пылесос HOLT HT-VC-007 (синий)</p>
+              <div class="price">
+                <div class="literal">
+                  <p class="literal-rub">260</p>
+                  <p class="literal-kop">.00</p>
+                </div>
+                <p class="before-price">312.00</p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button>В корзину</button>
+              <img class="litter" src="src/images/litter.png" />
+            </div>
+          </div>
+          <img class="long-line" src="src/images/long-line.png" />
+          <div class="good">
+            <img class="good-img" src="src/images/vac-cl.png" />
+            <div class="text">
+              <p class="name">Пылесос HOLT HT-VC-007 (синий)</p>
+              <div class="price">
+                <div class="literal">
+                  <p class="literal-rub">260</p>
+                  <p class="literal-kop">.00</p>
+                </div>
+                <p class="before-price">312.00</p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button>В корзину</button>
+              <img class="litter" src="src/images/litter.png" />
+            </div>
+          </div>
+          <img class="long-line" src="src/images/long-line.png" />
+          <div class="good">
+            <img class="good-img" src="src/images/vac-cl.png" />
+            <div class="text">
+              <p class="name">Пылесос HOLT HT-VC-007 (синий)</p>
+              <div class="price">
+                <div class="literal">
+                  <p class="literal-rub">260</p>
+                  <p class="literal-kop">.00</p>
+                </div>
+                <p class="before-price">312.00</p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button>В корзину</button>
+              <img class="litter" src="src/images/litter.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="low-info" class="low-info">
+        <p id="pay-bottom">Оплата</p>
+        <p id="delivery-bottom">Доставка</p>
+        <p id="selfCaring-bottom">Самовывоз</p>
+        <p id="help-bottom">Помощь</p>
+      </div>
       <div class="menu__bottom">
-        <p class="menu__bottom-info">Информация</p>
-        <p>Сравнение</p>
-        <p>Избранное</p>
-        <p>Корзина</p>
+        <p id="bottom-info" class="menu__bottom-info">Информация</p>
+        <p class="bottom-button" id="compare-bottom">Сравнение</p>
+        <p class="bottom-button" id="chosen-bottom">Избранное</p>
+        <p id="buy-bottom">Корзина</p>
+      </div>
+      <div class="pop-up">
+        <div class="payment pay">
+          <p>
+            Оплату можно провести в точке выдачи или при доставке товара.<br />Мы
+            принимаем как наличные, так и следующие банковские карты:
+          </p>
+          <img src="src/images/PaymentIcons.png" alt="" />
+          <p>Мы предлагаем рассрочку в 0% от 45 белорусских рублей в месяц!</p>
+        </div>
+        <div class="delivery del">
+          <p>
+            Мы доставляем наши заказы настолько быстро, насколько это возможно.
+          </p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Мы работаем без выходных</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Мы без проблем доставим заказы в крупнейших городах Беларуси</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>
+            Мы можем отправить заказ по почте, подробности уточните у оператора
+          </p>
+        </div>
+        <div class="selfCaring self">
+          <p>Мы имеем пункты выдачи в крупнейших городах Беларуси:</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Минск: Проспект Независимости, 12</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Гомель: ул. Барыкина, 5</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Могилёв: Ленинская ул., 74</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Витебск: Московский проспект, 42</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Гродно: ул. Ольги Соломоновой, 96</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Брест: бульв. Космонавтов, 69</p>
+        </div>
+        <div class="help">
+          <p>Нужна помощь?</p>
+          <p>
+            Наши операторы с радостью ответят на любой интересующий вас вопрос
+          </p>
+          <input type="text" placeholder="Укажите ваш номер телефона" />
+          <p>Мы постараемся позвонить как можно быстрее!</p>
+          <button class="end-btn">Отправить</button>
+        </div>
+        <div id="end-show" class="buy">
+          <p>Прекрасный выбор!</p>
+          <p>
+            Пожалуйста, укажите свой номер телефона, наш оператор скоро свяжется
+            с вами
+          </p>
+          <input type="text" placeholder="Укажите ваш номер телефона" />
+          <p>Мы работаем без выходных!</p>
+          <button class="end-btn">Отправить</button>
+        </div>
       </div>
     </header>
     <main class="main-body">
@@ -122,26 +339,36 @@
       <section class="pop-categories">
         <h1>Популярные категории</h1>
         <div class="pop-items">
-          <div class="pop">
-            <img src="src/images/microwave.png" />
-            <p>Микроволновые печи</p>
-          </div>
-          <div class="pop">
-            <img src="src/images/microwave.png" />
-            <p>Микроволновые печи</p>
-          </div>
-          <div class="pop">
-            <img src="src/images/microwave.png" />
-            <p>Микроволновые печи</p>
-          </div>
-          <div class="pop">
-            <img src="src/images/microwave.png" />
-            <p>Микроволновые печи</p>
-          </div>
-          <div class="pop">
-            <img src="src/images/microwave.png" />
-            <p>Микроволновые печи</p>
-          </div>
+          <a class="katalog-search" href="choise.html">
+            <div class="pop">
+              <img src="src/images/fridge-front.png" />
+              <p>Холодильники</p>
+            </div>
+          </a>
+          <a class="katalog-search" href="choise.html">
+            <div class="pop">
+              <img src="src/images/tv.png" />
+              <p>Телевизоры</p>
+            </div>
+          </a>
+          <a class="katalog-search" href="choise.html">
+            <div class="pop">
+              <img src="src/images/vaccum.png" />
+              <p>Пылесосы</p>
+            </div>
+          </a>
+          <a class="katalog-search" href="choise.html">
+            <div class="pop">
+              <img src="src/images/multi.png" />
+              <p>Мультиварки</p>
+            </div>
+          </a>
+          <a class="katalog-search" href="choise.html">
+            <div class="pop">
+              <img src="src/images/microwave.png" />
+              <p>Микроволновки</p>
+            </div>
+          </a>
         </div>
       </section>
       <section class="hits">
@@ -150,168 +377,204 @@
           <h1>Хиты продаж</h1>
           <img src="src/images/fire.png" />
         </div>
-        <div class="all-hits">
+        <div id="all-hits" class="all-hits">
           <div class="main-good">
             <div class="sale">-20%</div>
-            <img src="src/images/vac-cl.png" />
+            <img class="main-good-img" src="src/images/vac-cl.png" />
             <div class="good-info">
               <div class="mark">
                 <img src="src/images/star.png" />
-                <p>4.4</p>
+                <p class="good-mark"></p>
               </div>
-              <p>код: 23456</p>
+              <p class="good-code"></p>
             </div>
-            <p id="name">Пылесос HOLT HT-VC-007 (синий)</p>
+            <p class="name"></p>
             <div class="price">
               <div class="main-price">
-                <p class="literal-rub">260.</p>
-                <p class="literal-cop">00</p>
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
               </div>
               <div class="before-price">
-                <p class="before-rub">312.</p>
-                <p class="before-kop">00</p>
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
               </div>
-              <p class="minus-price">-52</p>
+              <p class="minus-price"></p>
             </div>
             <div class="good-buttons">
-              <button>В корзину</button>
-              <div><img class="click" src="src/images/click.svg" /></div>
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
             </div>
           </div>
           <div class="main-good">
             <div class="sale">-20%</div>
-            <img src="src/images/vac-cl.png" />
+            <img class="main-good-img" src="src/images/vac-cl.png" />
             <div class="good-info">
               <div class="mark">
                 <img src="src/images/star.png" />
-                <p>4.4</p>
+                <p class="good-mark"></p>
               </div>
-              <p>код: 23456</p>
+              <p class="good-code"></p>
             </div>
-            <p id="name">Пылесос HOLT HT-VC-007 (синий)</p>
+            <p class="name"></p>
             <div class="price">
               <div class="main-price">
-                <p class="literal-rub">260.</p>
-                <p class="literal-cop">00</p>
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
               </div>
               <div class="before-price">
-                <p class="before-rub">312.</p>
-                <p class="before-kop">00</p>
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
               </div>
-              <p class="minus-price">-52</p>
+              <p class="minus-price"></p>
             </div>
             <div class="good-buttons">
-              <button>В корзину</button>
-              <div><img class="click" src="src/images/click.svg" /></div>
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
             </div>
           </div>
           <div class="main-good">
             <div class="sale">-20%</div>
-            <img src="src/images/vac-cl.png" />
+            <img class="main-good-img" src="src/images/vac-cl.png" />
             <div class="good-info">
               <div class="mark">
                 <img src="src/images/star.png" />
-                <p>4.4</p>
+                <p class="good-mark"></p>
               </div>
-              <p>код: 23456</p>
+              <p class="good-code"></p>
             </div>
-            <p id="name">Пылесос HOLT HT-VC-007 (синий)</p>
+            <p class="name"></p>
             <div class="price">
               <div class="main-price">
-                <p class="literal-rub">260.</p>
-                <p class="literal-cop">00</p>
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
               </div>
               <div class="before-price">
-                <p class="before-rub">312.</p>
-                <p class="before-kop">00</p>
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
               </div>
-              <p class="minus-price">-52</p>
+              <p class="minus-price"></p>
             </div>
             <div class="good-buttons">
-              <button>В корзину</button>
-              <div><img class="click" src="src/images/click.svg" /></div>
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
             </div>
           </div>
           <div class="good__string-new"></div>
           <div class="main-good">
             <div class="sale">-20%</div>
-            <img src="src/images/vac-cl.png" />
+            <img class="main-good-img" src="src/images/vac-cl.png" />
             <div class="good-info">
               <div class="mark">
                 <img src="src/images/star.png" />
-                <p>4.4</p>
+                <p class="good-mark"></p>
               </div>
-              <p>код: 23456</p>
+              <p class="good-code"></p>
             </div>
-            <p id="name">Пылесос HOLT HT-VC-007 (синий)</p>
+            <p class="name"></p>
             <div class="price">
               <div class="main-price">
-                <p class="literal-rub">260.</p>
-                <p class="literal-cop">00</p>
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
               </div>
               <div class="before-price">
-                <p class="before-rub">312.</p>
-                <p class="before-kop">00</p>
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
               </div>
-              <p class="minus-price">-52</p>
+              <p class="minus-price"></p>
             </div>
             <div class="good-buttons">
-              <button>В корзину</button>
-              <div><img class="click" src="src/images/click.svg" /></div>
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
             </div>
           </div>
           <div class="main-good">
             <div class="sale">-20%</div>
-            <img src="src/images/vac-cl.png" />
+            <img class="main-good-img" src="src/images/vac-cl.png" />
             <div class="good-info">
               <div class="mark">
                 <img src="src/images/star.png" />
-                <p>4.4</p>
+                <p class="good-mark"></p>
               </div>
-              <p>код: 23456</p>
+              <p class="good-code"></p>
             </div>
-            <p id="name">Пылесос HOLT HT-VC-007 (синий)</p>
+            <p class="name"></p>
             <div class="price">
               <div class="main-price">
-                <p class="literal-rub">260.</p>
-                <p class="literal-cop">00</p>
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
               </div>
               <div class="before-price">
-                <p class="before-rub">312.</p>
-                <p class="before-kop">00</p>
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
               </div>
-              <p class="minus-price">-52</p>
+              <p class="minus-price"></p>
             </div>
             <div class="good-buttons">
-              <button>В корзину</button>
-              <div><img class="click" src="src/images/click.svg" /></div>
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
             </div>
           </div>
           <div class="main-good">
             <div class="sale">-20%</div>
-            <img src="src/images/vac-cl.png" />
+            <img class="main-good-img" src="src/images/vac-cl.png" />
             <div class="good-info">
               <div class="mark">
                 <img src="src/images/star.png" />
-                <p>4.4</p>
+                <p class="good-mark"></p>
               </div>
-              <p>код: 23456</p>
+              <p class="good-code"></p>
             </div>
-            <p id="name">Пылесос HOLT HT-VC-007 (синий)</p>
+            <p class="name"></p>
             <div class="price">
               <div class="main-price">
-                <p class="literal-rub">260.</p>
-                <p class="literal-cop">00</p>
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
               </div>
               <div class="before-price">
-                <p class="before-rub">312.</p>
-                <p class="before-kop">00</p>
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
               </div>
-              <p class="minus-price">-52</p>
+              <p class="minus-price"></p>
             </div>
             <div class="good-buttons">
-              <button>В корзину</button>
-              <div><img class="click" src="src/images/click.svg" /></div>
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -319,174 +582,207 @@
       <section class="novelties">
         <h1 class="stringNovel">Новинки</h1>
         <div class="offers">
-          <!-- <img class="slide-left" src="src/images/LBtn.png" /> -->
           <img class="first-offer" src="src/images/sale.jpg" />
-          <!-- <img class="second-offer" src="src/images/sale2.png" /> -->
-          <!-- <img class="slide-right" src="src/images/LBtn.png" /> -->
           <img src="src/images/best.jpg" class="best" />
         </div>
         <div class="nov">
           <div class="main-good">
             <div class="sale">-20%</div>
-            <img src="src/images/vac-cl.png" />
+            <img class="main-good-img" src="src/images/vac-cl.png" />
             <div class="good-info">
               <div class="mark">
                 <img src="src/images/star.png" />
-                <p>4.4</p>
+                <p class="good-mark"></p>
               </div>
-              <p>код: 23456</p>
+              <p class="good-code"></p>
             </div>
-            <p id="name">Пылесос HOLT HT-VC-007 (синий)</p>
+            <p class="name"></p>
             <div class="price">
               <div class="main-price">
-                <p class="literal-rub">260.</p>
-                <p class="literal-cop">00</p>
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
               </div>
               <div class="before-price">
-                <p class="before-rub">312.</p>
-                <p class="before-kop">00</p>
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
               </div>
-              <p class="minus-price">-52</p>
+              <p class="minus-price"></p>
             </div>
             <div class="good-buttons">
-              <button>В корзину</button>
-              <div><img class="click" src="src/images/click.svg" /></div>
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
             </div>
           </div>
           <div class="main-good">
             <div class="sale">-20%</div>
-            <img src="src/images/vac-cl.png" />
+            <img class="main-good-img" src="src/images/vac-cl.png" />
             <div class="good-info">
               <div class="mark">
                 <img src="src/images/star.png" />
-                <p>4.4</p>
+                <p class="good-mark"></p>
               </div>
-              <p>код: 23456</p>
+              <p class="good-code"></p>
             </div>
-            <p id="name">Пылесос HOLT HT-VC-007 (синий)</p>
+            <p class="name"></p>
             <div class="price">
               <div class="main-price">
-                <p class="literal-rub">260.</p>
-                <p class="literal-cop">00</p>
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
               </div>
               <div class="before-price">
-                <p class="before-rub">312.</p>
-                <p class="before-kop">00</p>
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
               </div>
-              <p class="minus-price">-52</p>
+              <p class="minus-price"></p>
             </div>
             <div class="good-buttons">
-              <button>В корзину</button>
-              <div><img class="click" src="src/images/click.svg" /></div>
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
             </div>
           </div>
           <div class="main-good">
             <div class="sale">-20%</div>
-            <img src="src/images/vac-cl.png" />
+            <img class="main-good-img" src="src/images/vac-cl.png" />
             <div class="good-info">
               <div class="mark">
                 <img src="src/images/star.png" />
-                <p>4.4</p>
+                <p class="good-mark"></p>
               </div>
-              <p>код: 23456</p>
+              <p class="good-code"></p>
             </div>
-            <p id="name">Пылесос HOLT HT-VC-007 (синий)</p>
+            <p class="name"></p>
             <div class="price">
               <div class="main-price">
-                <p class="literal-rub">260.</p>
-                <p class="literal-cop">00</p>
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
               </div>
               <div class="before-price">
-                <p class="before-rub">312.</p>
-                <p class="before-kop">00</p>
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
               </div>
-              <p class="minus-price">-52</p>
+              <p class="minus-price"></p>
             </div>
             <div class="good-buttons">
-              <button>В корзину</button>
-              <div><img class="click" src="src/images/click.svg" /></div>
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
             </div>
           </div>
           <div class="good__string-new"></div>
           <div class="main-good">
             <div class="sale">-20%</div>
-            <img src="src/images/vac-cl.png" />
+            <img class="main-good-img" src="src/images/vac-cl.png" />
             <div class="good-info">
               <div class="mark">
                 <img src="src/images/star.png" />
-                <p>4.4</p>
+                <p class="good-mark"></p>
               </div>
-              <p>код: 23456</p>
+              <p class="good-code"></p>
             </div>
-            <p id="name">Пылесос HOLT HT-VC-007 (синий)</p>
+            <p class="name"></p>
             <div class="price">
               <div class="main-price">
-                <p class="literal-rub">260.</p>
-                <p class="literal-cop">00</p>
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
               </div>
               <div class="before-price">
-                <p class="before-rub">312.</p>
-                <p class="before-kop">00</p>
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
               </div>
-              <p class="minus-price">-52</p>
+              <p class="minus-price"></p>
             </div>
             <div class="good-buttons">
-              <button>В корзину</button>
-              <div><img class="click" src="src/images/click.svg" /></div>
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
             </div>
           </div>
           <div class="main-good">
             <div class="sale">-20%</div>
-            <img src="src/images/vac-cl.png" />
+            <img class="main-good-img" src="src/images/vac-cl.png" />
             <div class="good-info">
               <div class="mark">
                 <img src="src/images/star.png" />
-                <p>4.4</p>
+                <p class="good-mark"></p>
               </div>
-              <p>код: 23456</p>
+              <p class="good-code"></p>
             </div>
-            <p id="name">Пылесос HOLT HT-VC-007 (синий)</p>
+            <p class="name"></p>
             <div class="price">
               <div class="main-price">
-                <p class="literal-rub">260.</p>
-                <p class="literal-cop">00</p>
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
               </div>
               <div class="before-price">
-                <p class="before-rub">312.</p>
-                <p class="before-kop">00</p>
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
               </div>
-              <p class="minus-price">-52</p>
+              <p class="minus-price"></p>
             </div>
             <div class="good-buttons">
-              <button>В корзину</button>
-              <div><img class="click" src="src/images/click.svg" /></div>
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
             </div>
           </div>
           <div class="main-good">
             <div class="sale">-20%</div>
-            <img src="src/images/vac-cl.png" />
+            <img class="main-good-img" src="src/images/vac-cl.png" />
             <div class="good-info">
               <div class="mark">
                 <img src="src/images/star.png" />
-                <p>4.4</p>
+                <p class="good-mark"></p>
               </div>
-              <p>код: 23456</p>
+              <p class="good-code"></p>
             </div>
-            <p id="name">Пылесос HOLT HT-VC-007 (синий)</p>
+            <p class="name"></p>
             <div class="price">
               <div class="main-price">
-                <p class="literal-rub">260.</p>
-                <p class="literal-cop">00</p>
+                <p class="literal-rub"></p>
+                <p class="literal-cop">.00</p>
               </div>
               <div class="before-price">
-                <p class="before-rub">312.</p>
-                <p class="before-kop">00</p>
+                <p class="before-rub"></p>
+                <p class="before-kop"></p>
               </div>
-              <p class="minus-price">-52</p>
+              <p class="minus-price"></p>
             </div>
             <div class="good-buttons">
-              <button>В корзину</button>
-              <div><img class="click" src="src/images/click.svg" /></div>
+              <button class="in-busket">В корзину</button>
+              <div class="one-click">
+                <img
+                  title="Нажмите для мнгновенного заказа товара"
+                  class="click"
+                  src="src/images/click.svg"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -575,5 +871,6 @@
         </p>
       </div>
     </footer>
+    <script src="src/script/main.js"></script>
   </body>
 </html>

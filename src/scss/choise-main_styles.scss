@@ -8,6 +8,12 @@ $maxWidth: 1980;
 }
 body {
   user-select: none;
+  a,
+  a:visited,
+  a:hover,
+  a:focus {
+    text-decoration: none;
+  }
 }
 main {
   padding-top: 102px;
@@ -26,6 +32,10 @@ main {
       line-height: 18px;
       letter-spacing: 0.01em;
       color: rgba(100, 94, 94, 1);
+      &:hover {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        cursor: pointer;
+      }
     }
     img {
       margin: 0 4px 2px 4px;
@@ -34,6 +44,10 @@ main {
   }
   .bold {
     font-weight: bold;
+    &:hover {
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0));
+      cursor: default;
+    }
   }
   .like-little {
     display: none;
@@ -95,6 +109,7 @@ main {
           display: inline-flex;
           align-items: center;
           user-select: none;
+          cursor: pointer;
         }
         .custom-checkbox + label::before {
           content: "";
@@ -157,19 +172,27 @@ main {
       margin-right: 5%;
       &-good {
         margin-bottom: 12px;
+        background-color: #fff;
         border: 3px solid rgba(231, 230, 230, 1);
         border-radius: 20px;
         padding: 10px;
         display: flex;
+        align-items: center;
         justify-content: space-between;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        &:hover {
+          cursor: pointer;
+        }
         &-image {
           width: 180px;
+          margin-right: 20px;
         }
         .buy {
           margin-left: 10vw;
           display: flex;
           justify-content: space-between;
           flex-direction: column;
+          height: 256px;
           .text {
             font-family: "Montserrat";
             font-style: normal;
@@ -234,6 +257,10 @@ main {
                 width: 25px;
                 margin-right: 5px;
                 margin-left: 10px;
+                &:hover {
+                  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                  cursor: pointer;
+                }
               }
             }
             .get {
@@ -249,10 +276,18 @@ main {
                 height: 34px;
                 text-align: center;
                 line-height: 34px;
+                &:hover {
+                  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                  cursor: pointer;
+                }
               }
               img {
                 margin-left: 10px;
                 width: 34px;
+                &:hover {
+                  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                  cursor: pointer;
+                }
               }
             }
           }
@@ -301,12 +336,9 @@ main {
             font-family: "Roboto";
             font-style: normal;
             letter-spacing: 0.01em;
-            .fraze {
-              font-size: 14px;
-              font-weight: 400;
-            }
-            .description {
-              font-size: 14px;
+            font-size: 14px;
+            font-weight: 400;
+            span {
               font-weight: 700;
             }
           }
@@ -357,8 +389,7 @@ main {
             * {
               height: auto;
             }
-            .row .fraze,
-            .row .description {
+            .row {
               @include adaptiv-font(18, 8);
             }
           }
@@ -405,8 +436,8 @@ main {
           }
           &-image {
             width: 180px;
-            margin-right: -40px;
-            margin-left: -40px;
+            margin-right: 10px;
+            margin-left: 0px;
           }
         }
       }
@@ -415,6 +446,10 @@ main {
   @media (max-width: 900px) {
     .choose__goods-good .buy {
       height: 190px;
+    }
+    .choose__goods-good-image {
+      width: 120px;
+      height: 120px;
     }
     .choose .sel .line {
       width: 126px;
@@ -447,9 +482,10 @@ main {
       width: calc(10vw + 60px);
     }
     .choose__goods-good-image {
-      width: 150px;
-      margin-left: -30px;
-      margin-right: -30px;
+      width: 100px;
+      height: 100px;
+      margin-left: 0px;
+      margin-right: 0px;
     }
   }
   @media (max-width: 600px) {
@@ -501,8 +537,7 @@ main {
           .name {
             @include adaptiv-font(30, 10);
           }
-          .row .fraze,
-          .row .description {
+          .row {
             @include adaptiv-font(30, 8);
           }
         }
@@ -547,13 +582,65 @@ main {
     }
   }
   @media (max-width: 500px) {
+    .choose__goods {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     .choose__goods-good {
+      width: auto;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 280px;
+      .char {
+        .name {
+          @include adaptiv-font(27, 14);
+        }
+        .row {
+          @include adaptiv-font(25, 12);
+        }
+      }
+      .buy {
+        margin-left: 0;
+        width: auto;
+        align-items: flex-start;
+        height: auto;
+        margin-top: 10px;
+        .text {
+          align-items: flex-start;
+          .code {
+            text-align: left;
+          }
+        }
+        .buttons {
+          align-self: flex-end;
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          height: 30px;
+          margin-top: 10px;
+          .get {
+            margin: 0;
+          }
+          .get button {
+            width: 70px;
+            height: 30px;
+            @include adaptiv-font(20, 10);
+          }
+          .get img {
+            width: 30px;
+          }
+          .like {
+            img {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+      }
       .literal-rub,
       .literal-kop {
         margin-bottom: -2px;
-      }
-      .buy {
-        margin-left: -30px;
       }
       .buy .text .code {
         margin-bottom: 5px;
@@ -561,13 +648,33 @@ main {
       .short-line {
         margin-top: 10px;
         margin-bottom: 5px;
+        width: 100%;
+      }
+      &-image {
+        width: 200px;
+        height: 200px;
+      }
+      .buy .text {
+        .info,
+        .code {
+          @include adaptiv-font(25, 15);
+        }
+        .price {
+          .literal-rub {
+            @include adaptiv-font(50, 20);
+          }
+          .literal-kop {
+            @include adaptiv-font(35, 15);
+          }
+          .before-price,
+          .minus-price {
+            @include adaptiv-font(28, 16);
+          }
+        }
       }
     }
   }
   @media (max-width: 400px) {
-    .info {
-      display: none;
-    }
     .choose .sel label {
       margin-right: -4vw;
       padding: 0;
@@ -578,36 +685,6 @@ main {
       font-size: 10px;
       &::placeholder {
         font-size: 15px;
-      }
-    }
-    .choose__goods-good .buy .text .code {
-      margin-bottom: -3px;
-    }
-    .choose__goods-good .short-line {
-      margin-top: 4px;
-      margin-bottom: 3px;
-      width: 20vw;
-    }
-    .price {
-      flex-direction: column;
-      div {
-        margin-top: 3px;
-      }
-    }
-    .like-little {
-      display: block;
-    }
-    .choose__goods-good .buy .buttons .like {
-      display: none;
-    }
-    .choose__goods-good .buy {
-      margin-left: -80px;
-    }
-    .choose__goods-good .buy .buttons .get {
-      flex-direction: column-reverse;
-      align-items: flex-end;
-      button {
-        margin-top: 5px;
       }
     }
   }

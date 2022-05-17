@@ -9,7 +9,7 @@
       href="./src/images/logo1.svg"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="./src/scss/choise_styles.css" />
+    <link rel="stylesheet" href="./src/css/choise_styles.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
       rel="stylesheet"
@@ -43,25 +43,45 @@
     <header>
       <div class="under-menu">
         <div id="city">
-          <p>Минск</p>
-          <img class="city-down" src="./src/images/city-down.png" />
+          <select name="" id="">
+            <option value="">Минск</option>
+            <option value="">Гомель</option>
+            <option value="">Могилёв</option>
+            <option value="">Витебск</option>
+            <option value="">Гродно</option>
+            <option value="">Брест</option>
+          </select>
         </div>
         <div class="info">
           Информация<img class="info-down" src="./src/images/city-down.png" />
         </div>
-        <div class="help">
+        <div id="help" class="help">
           <p id="payment">Оплата</p>
           <p id="delivery">Доставка</p>
           <p id="selfCaring">Самовывоз</p>
           <p id="help">Помощь</p>
         </div>
-        <div class="tel-number">
+        <div id="tel" class="tel-number">
           <div class="num__change">
             <img src="src/images/MTS.png" class="tel-icon" />
             <p>+375 44 123 675 89</p>
           </div>
           <img class="num__icon-phone" src="src/images/phone.png" />
           <img class="num-down" src="src/images/city-down.png" />
+        </div>
+      </div>
+      <div id="num-drop" class="num-drop">
+        <div>
+          <img src="src/images/MTS.png" class="tel-icon" />
+          <p>+375 44 123 675 89</p>
+        </div>
+        <div>
+          <img src="src/images/life.png" class="tel-icon" />
+          <p>+375 44 123 675 89</p>
+        </div>
+        <div>
+          <img src="src/images/velcom.png" class="tel-icon" />
+          <p>+375 44 123 675 89</p>
         </div>
       </div>
       <div class="menu">
@@ -74,15 +94,19 @@
           <img src="src/images/catalog.png" />
         </div>
         <div class="search">
-          <img src="src/images/search.png" />
-          <input type="text" placeholder="Введите название техники" />
+          <img id="search" src="src/images/search.png" />
+          <input
+            id="input-search"
+            type="text"
+            placeholder="Введите название техники"
+          />
         </div>
         <div class="buttons">
-          <div class="menu-buttons">
+          <div id="chosen" class="menu-buttons">
             <img src="src/images/chosen.png" />
             <p>Избранное</p>
           </div>
-          <div class="menu-buttons">
+          <div id="compare" class="menu-buttons">
             <img src="src/images/comparison.png" />
             <p>Сравнение</p>
           </div>
@@ -95,7 +119,7 @@
               <p id="amount">0</p>
             </div>
             <div class="menu__price">
-              <p id="rub">34</p>
+              <p id="rub">0</p>
               <p class="t">.</p>
               <p id="kop">00</p>
               <p class="rub">руб</p>
@@ -104,18 +128,195 @@
           </div>
         </div>
       </div>
+      <div id="katalog-drop" class="katalog-drop">
+        <div>
+          <img src="src/images/fridge-icon.png" />
+          <p>Холодильники</p>
+        </div>
+        <div>
+          <img src="src/images/microwave-icon.png" alt="" />
+          <p>Микроволновки</p>
+        </div>
+        <div>
+          <img src="src/images/vaccum-icon.png" alt="" />
+          <p>Пылесосы</p>
+        </div>
+        <div>
+          <img src="src/images/mult-icon.png" alt="" />
+          <p>Мультиварки</p>
+        </div>
+        <div>
+          <img src="src/images/tv-icon.png" alt="" />
+          <p>Телевизоры</p>
+        </div>
+      </div>
+      <div id="header-drop" class="header-drop">
+        <div class="header">
+          <div>
+            <p>Товары:</p>
+            <p id="kol">0</p>
+          </div>
+          <button id="end" class="end">
+            <p>Купить</p>
+            <img src="src/images/buy-button.png" />
+          </button>
+          <img
+            id="header-cross"
+            class="cross"
+            src="src/images/cross.png"
+            alt=""
+          />
+        </div>
+        <div id="basket-goods">
+          <img class="long-line" src="src/images/long-line.png" />
+          <div class="good">
+            <img class="good-img" src="src/images/vac-cl.png" />
+            <div class="text">
+              <p class="name">Пылесос HOLT HT-VC-007 (синий)</p>
+              <div class="price">
+                <div class="literal">
+                  <p class="literal-rub">260</p>
+                  <p class="literal-kop">.00</p>
+                </div>
+                <p class="before-price">312.00</p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="in-basket">В корзину</button>
+              <img class="litter" src="src/images/litter.png" />
+            </div>
+          </div>
+          <img class="long-line" src="src/images/long-line.png" />
+          <div class="good">
+            <img class="good-img" src="src/images/vac-cl.png" />
+            <div class="text">
+              <p class="name">Пылесос HOLT HT-VC-007 (синий)</p>
+              <div class="price">
+                <div class="literal">
+                  <p class="literal-rub">260</p>
+                  <p class="literal-kop">.00</p>
+                </div>
+                <p class="before-price">312.00</p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="in-basket">В корзину</button>
+              <img class="litter" src="src/images/litter.png" />
+            </div>
+          </div>
+          <img class="long-line" src="src/images/long-line.png" />
+          <div class="good">
+            <img class="good-img" src="src/images/vac-cl.png" />
+            <div class="text">
+              <p class="name">Пылесос HOLT HT-VC-007 (синий)</p>
+              <div class="price">
+                <div class="literal">
+                  <p class="literal-rub">260</p>
+                  <p class="literal-kop">.00</p>
+                </div>
+                <p class="before-price">312.00</p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="in-basket">В корзину</button>
+              <img class="litter" src="src/images/litter.png" />
+            </div>
+          </div>
+          <img class="long-line" src="src/images/long-line.png" />
+          <div class="good">
+            <img class="good-img" src="src/images/vac-cl.png" />
+            <div class="text">
+              <p class="name">Пылесос HOLT HT-VC-007 (синий)</p>
+              <div class="price">
+                <div class="literal">
+                  <p class="literal-rub">260</p>
+                  <p class="literal-kop">.00</p>
+                </div>
+                <p class="before-price">312.00</p>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="in-basket">В корзину</button>
+              <img class="litter" src="src/images/litter.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="low-info" class="low-info">
+        <p id="pay-bottom">Оплата</p>
+        <p id="delivery-bottom">Доставка</p>
+        <p id="selfCaring-bottom">Самовывоз</p>
+        <p id="help-bottom">Помощь</p>
+      </div>
       <div class="menu__bottom">
-        <p class="menu__bottom-info">Информация</p>
-        <p>Сравнение</p>
-        <p>Избранное</p>
-        <p>Корзина</p>
+        <p id="bottom-info" class="menu__bottom-info">Информация</p>
+        <p class="bottom-button" id="compare-bottom">Сравнение</p>
+        <p class="bottom-button" id="chosen-bottom">Избранное</p>
+        <p id="buy-bottom">Корзина</p>
+      </div>
+      <div class="pop-up">
+        <div class="payment pay">
+          <p>
+            Оплату можно провести в точке выдачи или при доставке товара.<br />Мы
+            принимаем как наличные, так и следующие банковские карты:
+          </p>
+          <img src="src/images/PaymentIcons.png" alt="" />
+          <p>Мы предлагаем рассрочку в 0% от 45 белорусских рублей в месяц!</p>
+        </div>
+        <div class="delivery del">
+          <p>
+            Мы доставляем наши заказы настолько быстро, насколько это возможно.
+          </p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Мы работаем без выходных</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Мы без проблем доставим заказы в крупнейших городах Беларуси</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>
+            Мы можем отправить заказ по почте, подробности уточните у оператора
+          </p>
+        </div>
+        <div class="selfCaring self">
+          <p>Мы имеем пункты выдачи в крупнейших городах Беларуси:</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Минск: Проспект Независимости, 12</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Гомель: ул. Барыкина, 5</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Могилёв: Ленинская ул., 74</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Витебск: Московский проспект, 42</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Гродно: ул. Ольги Соломоновой, 96</p>
+          <img class="long-line" src="src/images/long-line.png" alt="" />
+          <p>Брест: бульв. Космонавтов, 69</p>
+        </div>
+        <div class="help">
+          <p>Нужна помощь?</p>
+          <p>
+            Наши операторы с радостью ответят на любой интересующий вас вопрос
+          </p>
+          <input type="text" placeholder="Укажите ваш номер телефона" />
+          <p>Мы постараемся позвонить как можно быстрее!</p>
+          <button class="end-btn">Отправить</button>
+        </div>
+        <div id="end-show" class="buy">
+          <p>Прекрасный выбор!</p>
+          <p>
+            Пожалуйста, укажите свой номер телефона, наш оператор скоро свяжется
+            с вами
+          </p>
+          <input type="text" placeholder="Укажите ваш номер телефона" />
+          <p>Мы работаем без выходных!</p>
+          <button class="end-btn">Отправить</button>
+        </div>
       </div>
     </header>
     <main>
       <section class="nav">
-        <a><p>Главная</p></a>
+        <a href="./index.html"><p>Главная</p></a>
         <img src="src/images/circle.svg" alt="" />
-        <a><p class="bold">Холодильники</p></a>
+        <a><p id="bold" class="bold">Холодильники</p></a>
       </section>
       <h1>Холодильники</h1>
       <section class="choose">
@@ -139,8 +340,8 @@
           <div class="price">
             <p>Цена</p>
             <div>
-              <input type="text" placeholder="от" />
-              <input type="text" placeholder="до" />
+              <input id="from" type="text" placeholder="от" />
+              <input id="to" type="text" placeholder="до" />
             </div>
           </div>
         </section>
@@ -233,7 +434,7 @@
                   />
                 </div>
                 <div class="get">
-                  <button>В корзину</button>
+                  <button class="in-basket">В корзину</button>
                   <img
                     class="clickBuy"
                     src="src/images/OneClickBuy.svg"
@@ -511,5 +712,6 @@
         </p>
       </div>
     </footer>
+    <script src="src/script/choise.js"></script>
   </body>
 </html>
