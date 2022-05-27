@@ -243,7 +243,7 @@ function load() {
   }
   function goodClick(event) {
     if (
-      event.target.closest("button") ||
+      event.target.closest(".buttons") ||
       event.target.closest(".clickBuy") ||
       event.target.closest(".chosen") ||
       event.target.closest(".comparison")
